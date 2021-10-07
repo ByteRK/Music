@@ -166,11 +166,12 @@ $(function () {
         /*
         * 歌单详细见
         * https://api.uomg.com/doc-rand.music.html
+
+        $.setRequestHeader('origin','http://localhost:63344');
+        $.setRequestHeader('referer','http://localhost:63344/');
         */
-        $.getJSON('https://api.uomg.com/api/rand.music?', {
-            sort: '热歌榜'
-            ,format: 'json'
-        }, function(json, textStatus) {
+        $.getJSON('https://api.hackerjk.top/Music/Random/NetEase.php', function(json, textStatus) {
+
             if (json.code == 1) {
                 if (flag == 0)
                     i.attr('class', 'fa fa-play');
