@@ -171,7 +171,7 @@ $(function () {
         $.setRequestHeader('referer','http://localhost:63344/');
         */
         const test = window.location.host;
-        const url = test + '/api.php'
+        const url = 'api.php'
         $.getJSON(url, function(json, textStatus) {
 
             if (json.code == 1) {
