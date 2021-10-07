@@ -170,7 +170,9 @@ $(function () {
         $.setRequestHeader('origin','http://localhost:63344');
         $.setRequestHeader('referer','http://localhost:63344/');
         */
-        $.getJSON('https://api.hackerjk.top/Music/Random/NetEase.php', function(json, textStatus) {
+        const test = window.location.host;
+        const url = test + '/api.php'
+        $.getJSON(url, function(json, textStatus) {
 
             if (json.code == 1) {
                 if (flag == 0)
